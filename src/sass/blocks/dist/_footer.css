@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  height: 180px;
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.footer__social_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  width: 32px;
+  height: 32px;
+  background: #212529;
+  border-radius: 100%;
+}
+.footer__copy {
+  text-align: center;
+  margin-top: -20px;
+  font-size: 14px;
+  font-family: "Open Sans";
+}

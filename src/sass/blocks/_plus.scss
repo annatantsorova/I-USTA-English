@@ -1,0 +1,38 @@
+.plus {
+    position: relative;
+    min-height: 475px;
+    padding: 70px 0 80px 0;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 65px;
+    }
+    &__item {
+        width: 270px;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+        }
+    }
+    &__subtitle {
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+        font-family: 'Open Sans';
+        color: rgb(80, 78, 78);
+    }
+    &__descr {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        font-family: 'Open Sans';
+        color:rgb(80, 78, 78);
+    }
+}

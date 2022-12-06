@@ -1,0 +1,16 @@
+.tags {
+    position: relative;
+    &__items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 105px;
+        width: 100%;
+        height: 200px;
+        background-color: #e3e0e0;
+        img {
+            width: 35%;
+        }
+    } 
+}
