@@ -11,34 +11,14 @@ $(document).ready(function () {
         }
     }
     );
-    console.log('script loaded');
-    function toggleClass(item) {
-        $(item).each(function (i) {
-            $(this).on('click', function (e) {
-                e.preventDefault();
-                $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-            });
-        });
-    }
-
-    toggleClass('.catalog-item__link');
-    toggleClass('.catalog-item__back');
-
+    
     // Modal
 
-    $('[data-modal=consultation]').on('click', function () {
-        $('.overlay, #consultation').fadeIn('slow');
-    });
-    $('.modal__close').on('click', function () {
-        $('.overlay, #consultation, #thanks').fadeOut('slow');
-    });
-
-    // $('.button_mini').each(function (i) {
-    //     $(this).on('click', function () {
-    //         $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-    //         $('.overlay, #order').fadeIn('slow');
-    //     });
+    // $('[data-modal=consultation]').on('click', function () {
+    //     $('.overlay, #consultation').fadeIn('slow');
+    // });
+    // $('.modal__close').on('click', function () {
+    //     $('.overlay, #consultation, #thanks').fadeOut('slow');
     // });
 
     function validateForms(form) {
@@ -69,12 +49,12 @@ $(document).ready(function () {
     };
 
     validateForms('#consultation-form');
-    validateForms('#consultation form');
+    validateForms('#consultation');
+    validateForms ('#thanks');
    
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
     $('#send_form').submit(function (e) {
-        console.log('formmmmm');
         e.preventDefault();
 
         if (!$(this).valid()) {
@@ -82,12 +62,12 @@ $(document).ready(function () {
         }
         $.ajax({
             type: "POST",
-            url: "your_url",
+            url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
             $('#consultation').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
+            $('#thanks').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
@@ -100,22 +80,6 @@ $(document).ready(function () {
         })
         $currLink.addClass("menu__link__active");
     });
-    // Smooth scroll    
-    // $(window).on("scroll", function (event) {
-    //     var $scrollPos = $(document).scrollTop(),        
-    //         $links = $('.navbar ul li a');
-    //         console.log('$scrollPos'+ $scrollPos);
-    //     $links.each(function () {
-    //         var $currLink = $(this);
-    //         $currLink.removeClass("menu__link__active");
-    //         if ($currLink.hasClass("dropdown-toggle") || $currLink.hasClass("dropdown-item")) {
-    //             return true;
-    //         }
-    //         var $refElement = $($currLink.attr("href"));
-    //         if ($refElement.position().top <= $scrollPos && $refElement.position().top + $refElement.height() > $scrollPos) {
-    //             $currLink.addClass("menu__link__active");
-    //         } 
-    //     });
-    // });
+ 
 });
 

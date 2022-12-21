@@ -77,7 +77,7 @@
                     <h2 class="promo__subheader">Order service through the <br>
                         <a href="#">mobile application</a> 
                     </h2>
-                    <button data-modal="consultation" class="button button_main">request a consultation</button>
+                    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#thanks">request a consultation</button>
                 </div>
             </div> 
         </div>
@@ -152,7 +152,7 @@
                         <input name="phone" required placeholder="Your phone">
                         <input name="email" required placeholder="Your E-mail" type="email">
 
-                        <button class="button button_submit">request a consultation</button>
+                        <button class="btn btn_consultation">request a consultation</button>
                     </form>
             </div>
                 <div class="consultation__block">
@@ -196,16 +196,13 @@
     </div>
   </footer>
 <!-- Modal -->
-<div class="overlay">
-    <div class="modal" id="consultation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+
+    <div class="modal fade" id="consultation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="exampleModalLabel">Just fill in the application form</h4>
           <h5 class="modal-title-2" id="exampleModalLabel">and we'll get back to you in 10 min</h5>
-          <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
             <form class="feed-form feed-form_mt25" action="#" id="send_form">
@@ -215,40 +212,23 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="button button_submit">request a consultation</button>
+          <button type="button" class="btn btn_submit">send</button>
         </div>
       </div>
     </div>
     </div>
-    <div class="modal" id="order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h4 class="modal-title" id="order">Your order</h4>
-            <h5 class="modal-title-2" id="order2">Best choice</h5>
-            <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-                <form class="feed-form feed-form_mt25" action="#" id="send_order-form">
-                    <input name="name" placeholder="Your name" type="text">
-                    <input name="phone" placeholder="Your phone number">
-                    <input name="email" placeholder="Your E-mail" type="email">
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="button button_submit">Order</button>
-            </div>
+    <div class="modal" tabindex="-1" role="dialog" id="thanks">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content-2">
+        <div class="modal-header">
+            <h5 class="modal-title-3">We will contact you soon</h5>
+        </div>
+        <div class="modal-body">
+            <p>Thank you for choosing I-USTA</p>
+        </div>
         </div>
     </div>
     </div>
-    <div class="modal modal_mini" id="thanks">
-        <div class="modal__close">&times;</div>
-        <div class="modal__subtitle">Thank you for your choosing</div>
-        <div class="modal__descr">We will contact you soon</div>
-    </div>
-</div>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>

@@ -321,7 +321,6 @@ template {
   flex-direction: column;
   align-items: center;
   margin-top: 160px;
-  margin-left: 128px;
 }
 .promo__header {
   margin-bottom: 80px;
@@ -339,7 +338,6 @@ template {
 }
 .promo__application {
   margin-top: 60px;
-  margin-left: -50px;
 }
 .promo__subheader {
   font-weight: 400;
@@ -458,7 +456,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.button {
+.btn {
   width: 150px;
   height: 70px;
   border-radius: 30px;
@@ -470,38 +468,59 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Open Sans";
+  box-shadow: none;
 }
-.button:hover {
+.btn:hover {
   background: #e48400;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
-  border-color: #dedddb;
+  border-color: #fff;
+  box-shadow: none;
 }
-.button_main {
+.btn-primary {
   width: 343px;
   margin-top: 85px;
-  color: #dedddb;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
   font-family: "Open Sans";
+  box-shadow: none;
 }
-.button_submit {
-  width: 70%;
+.btn_submit {
+  width: 50%;
   height: 55px;
   font-size: 16px;
   color: #e48400;
   font-family: "Open Sans";
+  box-shadow: none;
 }
-.button_submit:hover {
+.btn_submit:hover {
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
-  border-color: #dedddb;
+  border-color: #fff;
   color: #fff;
+  box-shadow: none;
 }
-.button_mini {
+.btn_consultation {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #e48400;
+  font-family: "Open Sans";
+  box-shadow: none;
+}
+.btn_consultation:hover {
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-mini {
   width: 131px;
   height: 40px;
   font-size: 14px;
@@ -510,12 +529,12 @@ html {
   margin-top: 15px;
   color: #212529;
 }
-.button_mini:hover {
+.btn-mini:hover {
   background: #e48400;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
-  border-color: #dedddb;
+  border-color: #fff;
   color: #fff;
 }
 
@@ -599,7 +618,7 @@ html {
 .consultation {
   position: relative;
   min-height: 680px;
-  padding: 100px 0 92px 0;
+  padding: 100px 0 92px;
   background-color: #e3e0e0;
   overflow-x: hidden;
 }
@@ -632,10 +651,11 @@ html {
 }
 
 .feed-form {
-  margin-top: 36px;
+  position: relative;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
 }
 .feed-form input {
   height: 50px;
@@ -652,85 +672,7 @@ html {
   margin-bottom: 20px;
 }
 .feed-form_mt25 {
-  margin-top: 25px;
-}
-
-.catalog {
-  position: relative;
-  padding: 50px 0 100px 0;
-  overflow-x: hidden;
-}
-.catalog__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.catalog__descr {
-  width: 950px;
-  height: 15px;
-  margin-top: 25px;
-  font-size: 18px;
-  font-family: "Open Sans";
-  font-weight: 300;
-  text-align: center;
-}
-.catalog__content {
-  margin-top: 140px;
-}
-.catalog-item {
-  width: 300px;
-  min-height: 440px;
-  border: 2px solid #e8e8e8;
-  padding: 20px 20px 26px 20px;
-  margin-bottom: 20px;
-}
-.catalog-item__subtitle {
-  margin-top: 70px;
-  color: #212529;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Open Sans";
-}
-.catalog-item__pricing-manat {
-  font-size: 40px;
-}
-.catalog-item__pricing-price {
-  font-size: 120px;
-}
-.catalog-item__descr {
-  margin-top: 16px;
-  color: #212529;
-  font-weight: 300;
-  font-size: 14px;
-  text-align: center;
-  font-family: "Open Sans";
-}
-.catalog-item hr {
-  background-color: #e3e0e0;
-  margin-top: 50px;
-  margin-bottom: 2px;
-  border-bottom: none;
-}
-.catalog-item__footer_mini {
-  display: block;
-  margin-left: 60px;
   margin-top: 15px;
-}
-.catalog-item__wrapper {
-  display: flex;
-  width: calc(200% + 0px);
-}
-.catalog-item__content {
-  width: 50%;
-  margin-right: 0px;
-  transform: translateX(-100%);
-  transition: 0.5s all;
-}
-.catalog-item__content_active {
-  transform: translateX(0%);
-  margin-right: 20px;
 }
 
 .banner {
@@ -814,21 +756,10 @@ html {
   font-family: "Open Sans";
 }
 
-.overlay {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.56);
-}
-
 .modal {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
   min-height: 400px;
   padding: 38px 40px 40px 40px;
 }
@@ -853,15 +784,29 @@ html {
   text-align: center;
   padding-top: 5px;
 }
-.modal__close {
-  position: absolute;
-  top: 0;
-  right: -40px;
-  font-size: 41px;
-  line-height: 21px;
-  color: #e48400;
-  cursor: pointer;
+.modal-title-3 {
+  padding-top: 22px;
+  color: #0d0d0d;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
   font-family: "Open Sans";
+}
+.modal-body p {
+  font-weight: 300;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #0d0d0d;
+}
+.modal-content-2 {
+  border-color: #e48400;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #fff;
 }
 .modal-footer {
   justify-content: center;
@@ -872,7 +817,7 @@ html {
   border-style: solid;
   border-color: #e3e0e0;
 }
-.modal_mini {
+.modal-mini {
   min-height: 140px;
 }
 .modal .error {
@@ -885,17 +830,11 @@ html {
   font-family: "Open Sans";
 }
 
-#consultation, #order, #thanks {
+#consultation, #thanks {
   display: none;
 }
 
 @media (max-width: 1200px) {
-  .promo__wrapper {
-    margin-right: 60px;
-  }
-  .promo__application {
-    margin-left: -18px;
-  }
   .promo__header {
     font-size: 90px;
   }
@@ -926,14 +865,10 @@ html {
   .header .menu__link {
     font-size: 16px;
   }
-  .promo__application {
-    margin-left: 26px;
-  }
   .promo__application img {
-    width: 90%;
-  }
-  .promo__wrapper {
-    margin-right: 99px;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
   }
   .promo__header {
     font-size: 84px;
@@ -953,9 +888,6 @@ html {
   }
   .consultation__wrapper {
     padding-left: 70px;
-  }
-  .catalog-item__pricing-price {
-    font-size: 100px;
   }
   .banner .row {
     flex-wrap: nowrap;
@@ -1001,11 +933,11 @@ html {
     margin-bottom: 0;
   }
   .promo__application {
-    margin-left: 44px;
     margin-top: 115px;
   }
-  .promo__application img {
-    width: 90%;
+  .promo__wrapper {
+    margin: 0 auto;
+    margin-top: 100px;
   }
   .consultation__block img {
     display: none;
@@ -1015,23 +947,6 @@ html {
   }
   .title_left {
     font-size: 28px;
-  }
-  .catalog__wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .catalog__descr {
-    display: none;
-  }
-  .catalog-item {
-    margin-bottom: -50px;
-  }
-  .catalog-item__pricing-price {
-    padding-left: 10px;
-  }
-  .catalog__content {
-    margin-top: 80px;
   }
   .banner .row {
     flex-direction: column;
@@ -1048,12 +963,6 @@ html {
   }
 }
 @media (max-width: 575px) {
-  .promo__application {
-    margin-left: 84px;
-  }
-  .promo__application img {
-    width: 80%;
-  }
   .promo__header {
     font-size: 60px;
   }
@@ -1062,10 +971,6 @@ html {
   }
   .tags__items-active {
     display: none;
-  }
-  .catalog__descr {
-    width: 256px;
-    font-size: 13px;
   }
   .consultation .title_left {
     font-size: 26px;
@@ -1078,14 +983,40 @@ html {
   .footer__copy {
     margin-top: 0;
   }
-  .modal-dialog {
+  .modal-dialog, .modal-mini-dialog {
     margin-top: 90px;
-    margin: 20px;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media (max-width: 460px) {
-  .modal-dialog {
+  .modal-dialog, .modal-mini-dialog {
     margin-top: 90px;
-    margin: 20px;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .promo .btn-primary {
+    width: 274px;
+  }
+  .consultation__wrapper {
+    display: block;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .promo .btn-primary {
+    width: 274px;
+  }
+  .modal-dialog, .modal-mini-dialog {
+    margin-top: 90px;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }/*# sourceMappingURL=style.css.map */

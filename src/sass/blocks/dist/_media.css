@@ -1,10 +1,4 @@
 @media (max-width: 1200px) {
-  .promo__wrapper {
-    margin-right: 60px;
-  }
-  .promo__application {
-    margin-left: -18px;
-  }
   .promo__header {
     font-size: 90px;
   }
@@ -36,14 +30,10 @@
     font-size: 16px;
   }
 
-  .promo__application {
-    margin-left: 26px;
-  }
   .promo__application img {
-    width: 90%;
-  }
-  .promo__wrapper {
-    margin-right: 99px;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
   }
   .promo__header {
     font-size: 84px;
@@ -66,10 +56,6 @@
 
   .consultation__wrapper {
     padding-left: 70px;
-  }
-
-  .catalog-item__pricing-price {
-    font-size: 100px;
   }
 
   .banner .row {
@@ -117,11 +103,11 @@
     margin-bottom: 0;
   }
   .promo__application {
-    margin-left: 44px;
     margin-top: 115px;
   }
-  .promo__application img {
-    width: 90%;
+  .promo__wrapper {
+    margin: 0 auto;
+    margin-top: 100px;
   }
 
   .consultation__block img {
@@ -134,24 +120,6 @@
 
   .title_left {
     font-size: 28px;
-  }
-
-  .catalog__wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .catalog__descr {
-    display: none;
-  }
-  .catalog-item {
-    margin-bottom: -50px;
-  }
-  .catalog-item__pricing-price {
-    padding-left: 10px;
-  }
-  .catalog__content {
-    margin-top: 80px;
   }
 
   .banner .row {
@@ -169,12 +137,6 @@
   }
 }
 @media (max-width: 575px) {
-  .promo__application {
-    margin-left: 84px;
-  }
-  .promo__application img {
-    width: 80%;
-  }
   .promo__header {
     font-size: 60px;
   }
@@ -184,11 +146,6 @@
 
   .tags__items-active {
     display: none;
-  }
-
-  .catalog__descr {
-    width: 256px;
-    font-size: 13px;
   }
 
   .consultation .title_left {
@@ -204,14 +161,37 @@
     margin-top: 0;
   }
 
-  .modal-dialog {
+  .modal-dialog, .modal-mini-dialog {
     margin-top: 90px;
-    margin: 20px;
+    margin: 0 auto;
+    width: fit-content;
   }
 }
 @media (max-width: 460px) {
-  .modal-dialog {
+  .modal-dialog, .modal-mini-dialog {
     margin-top: 90px;
-    margin: 20px;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .promo .btn-primary {
+    width: 274px;
+  }
+
+  .consultation__wrapper {
+    display: block;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .promo .btn-primary {
+    width: 274px;
+  }
+
+  .modal-dialog, .modal-mini-dialog {
+    margin-top: 90px;
+    margin: 0 auto;
+    width: fit-content;
   }
 }
